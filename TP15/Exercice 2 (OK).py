@@ -5,8 +5,7 @@ class LabeledTextField(QWidget):
     def __init__(self,text):
         QWidget.__init__(self)
 
-        mainWidget = QWidget()
-        mainWidget.setMaximumSize(400,500)
+        self.setMaximumSize(400,500)
 
         self.layout = QHBoxLayout()
         self.label = QLabel()
@@ -21,9 +20,14 @@ class LabeledTextField(QWidget):
 class ConfigurationDialog(QDialog) :
     def __init__(self):
 
+        self.layout = QVBoxLayout()
         self.obj1 = LabeledTextField('IP adress')
         self.obj2 = LabeledTextField('User')
         self.obj3 = LabeledTextField ('Password')
+
+        self.layout.addWidget(self.obj1)
+        self.layout.addWidget(self.obj2)
+        self.layout.addWidget(self.obj3)
 
 
 if __name__ == '__main__':
