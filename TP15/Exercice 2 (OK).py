@@ -21,6 +21,7 @@ class LabeledTextField(QWidget):
 
 class ConfigurationDialog(QDialog) :
     def __init__(self):
+        QDialog.__init__(self)
 
         self.layout = QVBoxLayout()
         self.obj1 = LabeledTextField('IP adress')
