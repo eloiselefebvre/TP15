@@ -7,13 +7,11 @@ class Window(QWidget) :
         QWidget.__init__(self)
 
 
-
-        mainWidget = QWidget()
-        mainWidget.setWindowTitle('SQL CLient')
-        mainWidget.setMinimumSize(600,400)
+        self.setWindowTitle('SQL CLient')
+        self.setMinimumSize(600,400)
 
         self.layout = QVBoxLayout()
-        mainWidget.setLayout(self.layout)
+        self.setLayout(self.layout)
 
         self.buttonsPanel = ButtonPanel()
         self.layout.addWidget(self.buttonsPanel)
@@ -22,7 +20,7 @@ class Window(QWidget) :
         self.layout.addWidget(self.notifPanel)
 
         self.resultTable = QTableWidget()
-        self.resultable.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.resultTable.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.layout.addWidget(self.resultTable)
 
 
@@ -40,6 +38,7 @@ class ButtonPanel(QWidget):
         self.layout.addWidget(self.button2)
         self.layout.addWidget(self.button3)
 
+        self.setLayout(self.layout)
 
 
 
