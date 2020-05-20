@@ -2,6 +2,7 @@ from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 
 class LabeledTextField(QWidget):
+
     def __init__(self,text):
         QWidget.__init__(self)
 
@@ -16,6 +17,7 @@ class LabeledTextField(QWidget):
 
         self.config = ConfigurationDialog()
         self.layout.addWidget(self.config)
+        self.setLayout(self.layout)
 
 class ConfigurationDialog(QDialog) :
     def __init__(self):
@@ -29,6 +31,7 @@ class ConfigurationDialog(QDialog) :
         self.layout.addWidget(self.obj2)
         self.layout.addWidget(self.obj3)
 
+        self.setLayout(self.layout)
 
 if __name__ == '__main__':
     app = QApplication ([])
